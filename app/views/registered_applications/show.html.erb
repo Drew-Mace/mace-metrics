@@ -1,0 +1,4 @@
+<%= @registered_applications.name %>
+<%= @registered_applications.url %>
+<%= link_to "Edit", edit_registered_application_path %>
+<%= link_to "Delete", @registered_applications, method: :delete, class: 'btn btn-danger' %>

@@ -1,0 +1,6 @@
+<% @registered_applications.each do |registered_applications| %>
+<%= registered_applications.name %>
+<%= registered_applications.url %>
+<% end %>
+
+<%= link_to "New App", new_registered_application_path %>
