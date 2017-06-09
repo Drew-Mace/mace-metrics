@@ -1,4 +1,6 @@
-<%= @registered_applications.name %>
-<%= @registered_applications.url %>
+<%= @registered_application.name %>
+<%= @registered_application.url %>
 <%= link_to "Edit", edit_registered_application_path %>
 <%= link_to "Delete", @registered_applications, method: :delete, class: 'btn btn-danger' %>
+<%= link_to "Add Event", new_event_path, class: 'btn btn-secondary' %>
+<%= link_to "View Events", registered_application_events_path(@registered_application) %>
