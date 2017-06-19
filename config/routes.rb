@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :events, only: [:create]
+  resources :events
   resources :registered_applications
   
   resources :registered_application do
@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   
   namespace :api, defaults: { format: :json } do
     resources :events, only: [:create]
+    match '/events', to: 'events#preflight', via: [:options]
   end
   
-  match '/events', to: 'events#preflight', via: [:options]
+  
 
   devise_for :users
   
