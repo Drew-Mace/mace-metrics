@@ -1,5 +1,6 @@
 <%= @registered_application.name %>
 <%= @registered_application.url %>
+<%= line_chart @registered_application.events.group_by_day(:created_at).count %>
 <%= link_to "Edit", edit_registered_application_path %>
 <%= link_to "Delete", @registered_applications, method: :delete, class: 'btn btn-danger' %>
 <%= link_to "Add Event", api_events_path, class: 'btn btn-secondary' %>
